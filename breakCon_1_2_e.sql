@@ -10,5 +10,5 @@ DELETE FROM RentalProperty
 WHERE propNum = 25;
 
 --Show after
-select * from RentalProperty
-where empId = 7;
+SELECT * FROM RentalProperty
+WHERE empId = 7;
