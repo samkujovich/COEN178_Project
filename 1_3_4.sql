@@ -8,6 +8,7 @@ AS
    result_rec large_cur%rowtype;
 BEGIN
      /* Open large_cur */
+	OPEN large_cur;
 LOOP
     FETCH large_cur INTO result_rec;
     EXIT WHEN large_cur%NOTFOUND;

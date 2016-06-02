@@ -1,9 +1,10 @@
 Create Or Replace Trigger Status_trig
 AFTER INSERT ON LeaseAgreement
+FOR EACH ROW
 BEGIN
-    Update LeaseAgreement
+    Update RentalProperty
     SET status = 'Not-Available'
-	WHERE propNum = :OLD.propNum;
+	WHERE propNum = :NEW.propNum;
 END Status_trig;
 /
 Show Errors;

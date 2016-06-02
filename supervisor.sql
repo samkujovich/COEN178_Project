@@ -4,7 +4,7 @@ ON RentalProperty
 COMPOUND TRIGGER
 
  /* Declaration Section*/
-v_MAX_Rental CONSTANT INTEGER := 3;
+	v_MAX_Rental CONSTANT INTEGER := 3;
      v_CurNum INTEGER := 1;	
 	 v_sup Number;
 
