@@ -7,6 +7,7 @@ AS
    
 	amt_rec amt_cur%rowtype;
 BEGIN
+	OPEN amt_cur;
 LOOP 
 	FETCH amt_cur INTO amt_rec; 
 	EXIT WHEN amt_cur%NOTFOUND; 

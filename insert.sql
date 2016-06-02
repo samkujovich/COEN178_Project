@@ -12,15 +12,14 @@ INSERT INTO Employee VALUES(5,500,'John','805-805-8058',TO_DATE('20011112','YYYY
 INSERT INTO Employee VALUES(6,69,'Christine','444-555-6666',TO_DATE('20150302','YYYYMMDD'),'Manager');
 INSERT INTO Employee VALUES(7,500,'Scarlet','333-111-2222',TO_DATE('20121212','YYYYMMDD'),'Supervisor');
 
-INSERT INTO PropertyOwner VALUES(10,'Johan','112-112-1112','123 Washington St','SC','95050',400); --is this 400 validated at all???
-INSERT INTO PropertyOwner VALUES(11,'Timmy','828-282-2822','100 Hello Ave','LA',99121,400);
-INSERT INTO PropertyOwner VALUES(12,'Alejandra','009-192-1919','111 Locust St','SF',99111,400);
-INSERT INTO PropertyOwner VALUES(13,'Katherine','444-444-4444','1 First Place Rd','SB','93108',400);
-INSERT INTO PropertyOwner VALUES(14,'Ashley','805-698-1212','566 Picacho Lane','SLO','91121',400);
+INSERT INTO PropertyOwner VALUES(10,'Johan','112-112-1112','123 Washington St','SC','95050',0);
+INSERT INTO PropertyOwner VALUES(11,'Timmy','828-282-2822','100 Hello Ave','LA',99121,0);
+INSERT INTO PropertyOwner VALUES(12,'Alejandra','009-192-1919','111 Locust St','SF',99111,0);
+INSERT INTO PropertyOwner VALUES(13,'Katherine','444-444-4444','1 First Place Rd','SB','93108',0);
+INSERT INTO PropertyOwner VALUES(14,'Ashley','805-698-1212','566 Picacho Lane','SLO','91121',0);
 
 INSERT INTO RentalProperty VALUES(21,10,'800 Baller Lane','SJ','91121',4,1200,'Available',TO_DATE('20151212','YYYYMMDD'), 2);
 INSERT INTO RentalProperty VALUES(22,10,'111 Jesus Rd','Montecito','93108',5,1800,'Available',TO_DATE('20161010','YYYYMMDD'),2);
 INSERT INTO RentalProperty VALUES(23,13,'12 Locust St','SLO','92010',1,900,'Available',TO_DATE('20150909','YYYYMMDD'),2);
 INSERT INTO RentalProperty VALUES(24,12,'800 Bellomy St','SC','95050',4,3600,'Available',TO_DATE('20160601','YYYYMMDD'),3);
 INSERT INTO RentalProperty VALUES(25,14,'22 Southside Ave','NY','02912',2,6000,'Available',TO_DATE('20160102','YYYYMMDD'),7);
---so, need to create new sql file that creates lease agreements, that will change availability status
