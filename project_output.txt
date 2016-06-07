@@ -1,0 +1,328 @@
+SQL> start demo.sql
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Trigger created.
+
+No errors.
+
+Trigger created.
+
+No errors.
+
+Trigger created.
+
+No errors.
+
+Trigger created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+     EMPID    PROPNUM STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                                                                             
+--------------------                                                            
+         2         21 800 Baller Lane      SJ                                   
+91121                                                                           
+                                                                                
+         2         22 111 Jesus Rd         Montecito                            
+93108                                                                           
+                                                                                
+         2         23 12 Locust St         SLO                                  
+92010                                                                           
+                                                                                
+
+     EMPID    PROPNUM STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                                                                             
+--------------------                                                            
+         3         24 800 Bellomy St       SC                                   
+95050                                                                           
+                                                                                
+         7         25 22 Southside Ave     NY                                   
+02912                                                                           
+                                                                                
+
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+  BRANCHID   COUNT(*)                                                           
+---------- ----------                                                           
+       500          1                                                           
+        69          1                                                           
+        12          3                                                           
+
+
+Procedure created.
+
+No errors.
+
+   PROPNUM    OWNERID STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                       ROOMS       RENT STATUS          AVAILDATE      EMPID 
+-------------------- ---------- ---------- --------------- --------- ---------- 
+        21         10 800 Baller Lane      SJ                                   
+91121                         4       1200 Available       12-DEC-15          2 
+                                                                                
+        22         10 111 Jesus Rd         Montecito                            
+93108                         5       1800 Available       10-OCT-16          2 
+                                                                                
+        23         13 12 Locust St         SLO                                  
+92010                         1        900 Available       09-SEP-15          2 
+                                                                                
+
+   PROPNUM    OWNERID STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                       ROOMS       RENT STATUS          AVAILDATE      EMPID 
+-------------------- ---------- ---------- --------------- --------- ---------- 
+        24         12 800 Bellomy St       SC                                   
+95050                         4       3600 Available       01-JUN-16          3 
+                                                                                
+        25         14 22 Southside Ave     NY                                   
+02912                         2       6000 Available       02-JAN-16          7 
+                                                                                
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+   PROPNUM    OWNERID STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                       ROOMS       RENT STATUS          AVAILDATE      EMPID 
+-------------------- ---------- ---------- --------------- --------- ---------- 
+        21         10 800 Baller Lane      SJ                                   
+91121                         4       1200 Not-Available   12-DEC-15          2 
+                                                                                
+        22         10 111 Jesus Rd         Montecito                            
+93108                         5       1800 Not-Available   10-OCT-16          2 
+                                                                                
+        23         13 12 Locust St         SLO                                  
+92010                         1        900 Available       09-SEP-15          2 
+                                                                                
+
+   PROPNUM    OWNERID STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                       ROOMS       RENT STATUS          AVAILDATE      EMPID 
+-------------------- ---------- ---------- --------------- --------- ---------- 
+        24         12 800 Bellomy St       SC                                   
+95050                         4       3600 Available       01-JUN-16          3 
+                                                                                
+        25         14 22 Southside Ave     NY                                   
+02912                         2       6000 Available       02-JAN-16          7 
+                                                                                
+
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+NAME              COUNT(*)                                                      
+--------------- ----------                                                      
+Tim                      2                                                      
+
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+INSERT INTO RentalProperty VALUES(26,10,'222 Nighttime Lane','Bouler','71212',1,2200,'Available',TO_DATE('20160801','YYYYMMDD'),2)
+            *
+ERROR at line 1:
+ORA-20000: Only 3 rentals for supervisor 
+ORA-06512: at "SKUJOVIC.SUPERVISORMAX", line 21 
+ORA-04088: error during execution of trigger 'SKUJOVIC.SUPERVISORMAX' 
+
+
+INSERT INTO Employee VALUES(8,12,'Riley','999-999-9999',TO_DATE('19940705','YYYYMMDD'),'Manager')
+            *
+ERROR at line 1:
+ORA-20000: Only 1 manager for branch 
+ORA-06512: at "SKUJOVIC.MANAGERMAX", line 23 
+ORA-04088: error during execution of trigger 'SKUJOVIC.MANAGERMAX' 
+
+
+BEGIN create_lease(21,'Jim','111-222-3333','111-222-3334','Jim Friend','111-222-3335',1800,TO_DATE('20170211','YYYYMMDD'),TO_DATE('20170411','YYYYMMDD')); END;
+
+*
+ERROR at line 1:
+ORA-02290: check constraint (SKUJOVIC.LEASEAGREEMENT) violated 
+ORA-06512: at "SKUJOVIC.CREATE_LEASE", line 42 
+ORA-06512: at line 1 
+
+
+
+   PROPNUM    OWNERID STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                       ROOMS       RENT STATUS          AVAILDATE      EMPID 
+-------------------- ---------- ---------- --------------- --------- ---------- 
+        21         10 800 Baller Lane      SJ                                   
+91121                         4       1200 Not-Available   12-DEC-15          2 
+                                                                                
+        22         10 111 Jesus Rd         Montecito                            
+93108                         5       1800 Not-Available   10-OCT-16          2 
+                                                                                
+        23         13 12 Locust St         SLO                                  
+92010                         1        900 Available       09-SEP-15          2 
+                                                                                
+
+   PROPNUM    OWNERID STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                       ROOMS       RENT STATUS          AVAILDATE      EMPID 
+-------------------- ---------- ---------- --------------- --------- ---------- 
+        24         12 800 Bellomy St       SC                                   
+95050                         4       3600 Available       01-JUN-16          3 
+                                                                                
+        25         14 22 Southside Ave     NY                                   
+02912                         2       6000 Available       02-JAN-16          7 
+                                                                                
+
+
+   PROPNUM    OWNERID STREET               CITY                                 
+---------- ---------- -------------------- --------------------                 
+ZIP                       ROOMS       RENT STATUS          AVAILDATE      EMPID 
+-------------------- ---------- ---------- --------------- --------- ---------- 
+        25         14 22 Southside Ave     NY                                   
+02912                         2       6000 Available       02-JAN-16          7 
+                                                                                
+
+
+1 row deleted.
+
+
+no rows selected
+
+SQL> spool off
